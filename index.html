@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Adrian Willis Sasuman — Technical Virtual Assistant & Automation Specialist</title>
+<meta name="description" content="Adrian Willis Sasuman is a Technical Virtual Assistant based in Davao City, Philippines. Specializing in CRM automation, WordPress development, and social media management." />
+<meta name="keywords" content="virtual assistant, CRM automation, WordPress developer, Keap, Zapier, Davao Philippines" />
+<meta property="og:title" content="Adrian Willis Sasuman — Technical Virtual Assistant" />
+<meta property="og:description" content="5+ years helping businesses automate workflows, build websites, and grow online." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #0d1117;
+    --paper: #f8f5f0;
+    --cream: #ede9e2;
+    --accent: #c8602a;
+    --accent-light: #f0ddd2;
+    --muted: #7a7570;
+    --rule: #d4cfc8;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --max: 1140px;
+    --gap: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  h1,h2,h3,h4 { font-family: var(--serif); line-height: 1.15; }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ── LAYOUT ── */
+  .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--gap); }
+  section { padding: clamp(4rem, 10vw, 8rem) 0; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(248,245,240,.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    transition: box-shadow .3s;
+  }
+  nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.08); }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem var(--gap);
+    max-width: var(--max); margin: 0 auto;
+  }
+  .nav-logo {
+    font-family: var(--serif); font-weight: 700; font-size: 1.05rem;
+    color: var(--ink); text-decoration: none; letter-spacing: .01em;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: .85rem; font-weight: 500; color: var(--muted);
+    text-decoration: none; transition: color .2s;
+    letter-spacing: .03em;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    background: var(--ink); color: var(--paper) !important;
+    padding: .55rem 1.3rem; border-radius: 3px;
+    font-weight: 600 !important; color: var(--paper);
+    transition: background .2s !important;
+  }
+  .nav-cta:hover { background: var(--accent) !important; color: var(--paper) !important; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+  .hamburger span { width: 22px; height: 2px; background: var(--ink); display: block; transition: .3s; }
+
+  /* ── HERO ── */
+  #home {
+    min-height: 100svh;
+    display: flex; align-items: center;
+    padding-top: 5rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: center;
+  }
+  .hero-text { animation: fadeUp .9s ease both; }
+  .hero-text .eyebrow { margin-bottom: 1.2rem; }
+  .hero-h1 {
+    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    font-weight: 900;
+    letter-spacing: -.02em;
+    line-height: 1.05;
+    margin-bottom: 1.4rem;
+  }
+  .hero-h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub {
+    font-size: 1.05rem; color: var(--muted);
+    max-width: 460px; margin-bottom: 2.2rem; line-height: 1.7;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent); color: #fff;
+    padding: .85rem 2rem; border-radius: 3px;
+    font-weight: 600; font-size: .95rem;
+    text-decoration: none; transition: background .2s, transform .2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #a84e22; transform: translateY(-2px); }
+  .btn-outline {
+    border: 1.5px solid var(--ink); color: var(--ink);
+    padding: .85rem 2rem; border-radius: 3px;
+    font-weight: 600; font-size: .95rem;
+    text-decoration: none; transition: .2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { background: var(--ink); color: var(--paper); }
+  .hero-visual {
+    position: relative;
+    animation: fadeUp .9s .2s ease both;
+  }
+  .hero-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 2rem;
+    box-shadow: 0 8px 40px rgba(0,0,0,.08);
+    position: relative;
+  }
+  .hero-card::before {
+    content: '';
+    position: absolute; top: -1px; left: 2rem; right: 2rem; height: 3px;
+    background: var(--accent); border-radius: 0 0 3px 3px;
+  }
+  .hero-avatar {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #e8874a);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 1.8rem; font-weight: 700; color: #fff;
+    margin-bottom: 1.2rem;
+  }
+  .hero-card h3 { font-size: 1.1rem; margin-bottom: .2rem; }
+  .hero-card p { font-size: .85rem; color: var(--muted); margin-bottom: 1.4rem; }
+  .stat-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; border-top: 1px solid var(--rule); padding-top: 1.2rem; }
+  .stat { text-align: center; }
+  .stat-num { font-family: var(--serif); font-size: 1.6rem; font-weight: 700; color: var(--accent); line-height: 1; }
+  .stat-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: .2rem; }
+
+  /* decoration */
+  .hero-deco {
+    position: absolute; right: -120px; top: 50%; transform: translateY(-50%);
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+    opacity: .5; pointer-events: none;
+    z-index: -1;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+  .section-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-top: .6rem; }
+  .section-header p { color: var(--muted); max-width: 580px; margin-top: .8rem; font-size: 1.02rem; }
+  hr.rule { border: none; border-top: 1px solid var(--rule); margin: 0; }
+
+  /* ── ABOUT ── */
+  #about { background: var(--cream); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+  .about-sidebar {}
+  .about-photo-placeholder {
+    width: 100%; aspect-ratio: 4/5;
+    background: linear-gradient(135deg, #e8d5c4 0%, #d4b8a0 100%);
+    border-radius: 6px; display: flex; align-items: flex-end;
+    padding: 1.5rem; position: relative; overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  .about-photo-placeholder::before {
+    content: 'AW';
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-60%);
+    font-family: var(--serif); font-size: 5rem; font-weight: 900;
+    color: rgba(255,255,255,.5); letter-spacing: -.05em;
+  }
+  .available-badge {
+    background: #fff; border-radius: 20px; padding: .4rem 1rem;
+    font-size: .78rem; font-weight: 600; color: var(--ink);
+    display: inline-flex; align-items: center; gap: .4rem;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; display: inline-block; }
+  .about-content {}
+  .about-content p { color: var(--muted); margin-bottom: 1rem; font-size: 1rem; }
+  .about-content p strong { color: var(--ink); }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.8rem; }
+  .tag {
+    background: #fff; border: 1px solid var(--rule);
+    padding: .35rem .8rem; border-radius: 3px;
+    font-size: .8rem; font-weight: 500; color: var(--ink);
+    transition: .2s;
+  }
+  .tag:hover { border-color: var(--accent); color: var(--accent); }
+  .certs { margin-top: 2rem; border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+  .certs h4 { font-family: var(--sans); font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+  .cert-item { display: flex; gap: .75rem; align-items: flex-start; margin-bottom: .8rem; }
+  .cert-icon { width: 32px; height: 32px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: .9rem; flex-shrink: 0; }
+  .cert-info strong { display: block; font-size: .85rem; }
+  .cert-info span { font-size: .78rem; color: var(--muted); }
+
+  /* ── SERVICES ── */
+  #services {}
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
+  .service-card {
+    background: #fff; border: 1px solid var(--rule);
+    border-radius: 6px; padding: 2rem;
+    transition: box-shadow .3s, transform .3s;
+    position: relative; overflow: hidden;
+  }
+  .service-card::after {
+    content: ''; position: absolute;
+    bottom: 0; left: 0; right: 0; height: 3px;
+    background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .3s;
+  }
+  .service-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
+  .service-card:hover::after { transform: scaleX(1); }
+  .service-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+  .service-card h3 { font-size: 1.1rem; margin-bottom: .6rem; }
+  .service-card p { font-size: .88rem; color: var(--muted); margin-bottom: 1.2rem; }
+  .service-tools { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .tool-chip { background: var(--accent-light); color: var(--accent); font-size: .72rem; font-weight: 600; padding: .25rem .6rem; border-radius: 20px; }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--cream); }
+  .filter-bar { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .filter-btn {
+    background: #fff; border: 1px solid var(--rule);
+    padding: .45rem 1.1rem; border-radius: 20px;
+    font-size: .82rem; font-weight: 500; cursor: pointer;
+    transition: .2s; color: var(--muted);
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 1.5rem; }
+  .project-card {
+    background: #fff; border: 1px solid var(--rule);
+    border-radius: 6px; overflow: hidden;
+    transition: box-shadow .3s, transform .3s;
+    cursor: pointer;
+    display: flex; flex-direction: column;
+  }
+  .project-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,.12); transform: translateY(-6px); }
+  .project-card[data-hide="true"] { display: none; }
+  .project-thumb {
+    height: 180px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem;
+    position: relative; overflow: hidden;
+  }
+  .project-thumb-crm { background: linear-gradient(135deg,#fde8db,#f0b898); }
+  .project-thumb-wp  { background: linear-gradient(135deg,#dbeafe,#93c5fd); }
+  .project-thumb-social { background: linear-gradient(135deg,#d1fae5,#6ee7b7); }
+  .project-thumb-sched { background: linear-gradient(135deg,#ede9fe,#c4b5fd); }
+  .project-thumb-brand { background: linear-gradient(135deg,#fef3c7,#fcd34d); }
+  .project-thumb-vid { background: linear-gradient(135deg,#ffe4e6,#fda4af); }
+  .project-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .project-tags { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: .8rem; }
+  .project-tag { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); }
+  .project-card h3 { font-size: 1.05rem; margin-bottom: .5rem; }
+  .project-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .project-link {
+    display: inline-flex; align-items: center; gap: .4rem;
+    font-size: .82rem; font-weight: 600; color: var(--ink);
+    text-decoration: none; margin-top: 1.2rem;
+    transition: color .2s;
+  }
+  .project-link:hover { color: var(--accent); }
+  .project-link svg { transition: transform .2s; }
+  .project-link:hover svg { transform: translateX(3px); }
+
+  /* ── CASE STUDY MODAL ── */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(13,17,23,.7);
+    z-index: 200; display: none; align-items: center; justify-content: center;
+    padding: 1rem; backdrop-filter: blur(4px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--paper); border-radius: 8px;
+    width: 100%; max-width: 760px; max-height: 90svh;
+    overflow-y: auto; padding: 3rem;
+    position: relative;
+    animation: scaleIn .3s ease;
+  }
+  .modal-close {
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    background: var(--cream); border: none; border-radius: 50%;
+    width: 36px; height: 36px; font-size: 1.2rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .modal h2 { font-size: 1.8rem; margin-bottom: .5rem; }
+  .modal .eyebrow { margin-bottom: .5rem; }
+  .modal-summary { font-size: 1rem; color: var(--muted); margin-bottom: 2rem; border-bottom: 1px solid var(--rule); padding-bottom: 2rem; }
+  .modal-meta { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; background: var(--cream); border-radius: 6px; padding: 1.2rem; margin-bottom: 2rem; }
+  .meta-item strong { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: .3rem; }
+  .meta-item span { font-size: .88rem; }
+  .modal-section h4 { font-family: var(--serif); font-size: 1.1rem; margin-bottom: .6rem; margin-top: 1.8rem; }
+  .modal-section p { font-size: .9rem; color: var(--muted); }
+  .modal-section ul { font-size: .9rem; color: var(--muted); padding-left: 1.2rem; }
+  .modal-section ul li { margin-bottom: .4rem; }
+  .outcome-row { display: flex; flex-direction: column; gap: .8rem; margin-top: .8rem; }
+  .outcome-item { display: flex; align-items: center; gap: .8rem; }
+  .outcome-bar-wrap { flex: 1; background: var(--cream); border-radius: 20px; height: 8px; overflow: hidden; }
+  .outcome-bar { height: 100%; background: var(--accent); border-radius: 20px; }
+  .outcome-num { font-family: var(--serif); font-weight: 700; font-size: 1rem; color: var(--accent); min-width: 48px; text-align: right; }
+  .outcome-label { font-size: .82rem; color: var(--muted); min-width: 160px; }
+  .process-timeline { margin-top: .8rem; }
+  .timeline-step { display: flex; gap: 1rem; margin-bottom: 1.2rem; }
+  .timeline-dot { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: .72rem; font-weight: 700; color: #fff; flex-shrink: 0; margin-top: .1rem; }
+  .timeline-content strong { display: block; font-size: .88rem; margin-bottom: .2rem; }
+  .timeline-content p { font-size: .82rem; color: var(--muted); }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials {}
+  .testi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 1.5rem; }
+  .testi-card {
+    background: #fff; border: 1px solid var(--rule);
+    border-radius: 6px; padding: 1.8rem;
+  }
+  .testi-quote { font-family: var(--serif); font-size: 1.3rem; color: var(--accent); margin-bottom: .8rem; }
+  .testi-card p { font-size: .9rem; color: var(--muted); margin-bottom: 1.2rem; font-style: italic; }
+  .testi-author strong { display: block; font-size: .88rem; }
+  .testi-author span { font-size: .78rem; color: var(--muted); }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--ink); color: var(--paper); }
+  #contact .eyebrow { color: var(--accent); }
+  #contact .section-header h2 { color: var(--paper); }
+  #contact .section-header p { color: rgba(248,245,240,.6); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(2rem,6vw,5rem); }
+  .contact-info {}
+  .contact-detail { display: flex; align-items: center; gap: .8rem; margin-bottom: 1.2rem; }
+  .contact-detail-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(200,96,42,.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+  .contact-detail span { font-size: .9rem; color: rgba(248,245,240,.75); }
+  .social-links { display: flex; gap: .8rem; margin-top: 2rem; }
+  .social-link {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1px solid rgba(248,245,240,.2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--paper); font-size: 1rem; text-decoration: none;
+    transition: .2s;
+  }
+  .social-link:hover { background: var(--accent); border-color: var(--accent); }
+  .contact-form {}
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label { display: block; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(248,245,240,.5); margin-bottom: .4rem; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 4px; padding: .8rem 1rem;
+    color: var(--paper); font-family: var(--sans); font-size: .9rem;
+    transition: border-color .2s;
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--accent); }
+  .form-group select option { background: var(--ink); }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .btn-send {
+    background: var(--accent); color: #fff;
+    border: none; padding: .85rem 2rem; border-radius: 3px;
+    font-family: var(--sans); font-weight: 600; font-size: .95rem;
+    cursor: pointer; transition: background .2s, transform .2s;
+    width: 100%; margin-top: .4rem;
+  }
+  .btn-send:hover { background: #a84e22; transform: translateY(-2px); }
+  .form-success { text-align: center; padding: 2rem; color: var(--paper); display: none; }
+  .form-success .check { font-size: 2.5rem; margin-bottom: .8rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #08090c; color: rgba(248,245,240,.4);
+    text-align: center; padding: 2rem 1rem;
+    font-size: .82rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-photo-placeholder { max-width: 320px; aspect-ratio: 1/1; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .nav-links { display: none; flex-direction: column; position: fixed; top: 60px; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 1.5rem var(--gap); gap: 1.2rem; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: flex; }
+    .modal { padding: 1.5rem; }
+    .modal-meta { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">Adrian<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-deco"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Technical Virtual Assistant · Davao, PH</p>
+        <h1 class="hero-h1">Automating Work.<br/><em>Amplifying</em> Results.</h1>
+        <p class="hero-sub">I help coaches, agencies, and founders build smarter workflows—through CRM automation, WordPress development, and strategic social media management.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Work with Me</a>
+          <a href="#projects" class="btn-outline">View My Work</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-avatar">AW</div>
+          <h3>Adrian Willis Sasuman</h3>
+          <p>Technical VA · CRM Expert · Web Designer</p>
+          <div class="stat-row">
+            <div class="stat">
+              <div class="stat-num">5+</div>
+              <div class="stat-label">Yrs Exp</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">30+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">10+</div>
+              <div class="stat-label">Tools</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-sidebar reveal">
+        <div class="about-photo-placeholder">
+          <span class="available-badge"><span class="dot"></span> Available for work</span>
+        </div>
+        <div class="certs">
+          <h4>Education & Certifications</h4>
+          <div class="cert-item">
+            <div class="cert-icon">🎓</div>
+            <div class="cert-info">
+              <strong>B.S. Information Technology</strong>
+              <span>St. Peter's College of Toril · 2015–2019</span>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">🤖</div>
+            <div class="cert-info">
+              <strong>AI Prompting & ChatGPT</strong>
+              <span>DICT Region XI · May 2025</span>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">📱</div>
+            <div class="cert-info">
+              <strong>Digital Marketing & Social Media</strong>
+              <span>DICT Region XI · April 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <p class="eyebrow">About Me</p>
+        <h2>I Build the Systems<br/>Behind Your Growth</h2>
+        <p>I'm a <strong>Technical Virtual Assistant and Automation Specialist</strong> based in Davao City, Philippines, with over five years of experience helping businesses work smarter—not harder.</p>
+        <p>My background spans <strong>CRM automation</strong> (Keap, Zapier, GoHighLevel), <strong>WordPress course portals</strong> (LearnDash, Memberium), and <strong>social media management</strong>. I've worked with life coaches, online education platforms, and financial brands to streamline operations and grow their digital presence.</p>
+        <p>When I'm not automating workflows or building websites, I'm producing short-form video content, designing brand assets, and staying current on the latest AI tools that can give my clients an edge.</p>
+        <div class="skill-tags">
+          <span class="tag">CRM Automation</span>
+          <span class="tag">WordPress</span>
+          <span class="tag">Keap</span>
+          <span class="tag">Zapier</span>
+          <span class="tag">GoHighLevel</span>
+          <span class="tag">LearnDash</span>
+          <span class="tag">Memberium</span>
+          <span class="tag">Kajabi</span>
+          <span class="tag">Canva</span>
+          <span class="tag">CapCut</span>
+          <span class="tag">Filmora</span>
+          <span class="tag">Photoshop</span>
+          <span class="tag">Acuity Scheduling</span>
+          <span class="tag">Google Calendar</span>
+          <span class="tag">Asana</span>
+          <span class="tag">Basecamp</span>
+          <span class="tag">Mailchimp</span>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="#" onclick="downloadResume(event)" class="btn-outline">⬇ Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">What I Do</p>
+      <h2>Services That Move the Needle</h2>
+      <p>From automation to design, I deliver end-to-end support so you can focus on what you do best.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">⚙️</div>
+        <h3>CRM Automation</h3>
+        <p>Automated lead nurturing workflows, email sequences, and CRM pipelines that eliminate repetitive manual tasks and accelerate follow-up.</p>
+        <div class="service-tools">
+          <span class="tool-chip">Keap</span>
+          <span class="tool-chip">Zapier</span>
+          <span class="tool-chip">GoHighLevel</span>
+          <span class="tool-chip">Mailchimp</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🌐</div>
+        <h3>WordPress Development</h3>
+        <p>Course portals, membership sites, and business websites—designed, configured, and launched with hosting setup included.</p>
+        <div class="service-tools">
+          <span class="tool-chip">WordPress</span>
+          <span class="tool-chip">LearnDash</span>
+          <span class="tool-chip">Memberium</span>
+          <span class="tool-chip">Kajabi</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📅</div>
+        <h3>Calendar & Scheduling</h3>
+        <p>Centralized appointment management that eliminates double-bookings and maximizes executive availability.</p>
+        <div class="service-tools">
+          <span class="tool-chip">Acuity</span>
+          <span class="tool-chip">Google Calendar</span>
+          <span class="tool-chip">Calendly</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📱</div>
+        <h3>Social Media Management</h3>
+        <p>Content planning, scheduling, moderation, and reporting across all major platforms—keeping your brand active and consistent.</p>
+        <div class="service-tools">
+          <span class="tool-chip">Canva</span>
+          <span class="tool-chip">Buffer</span>
+          <span class="tool-chip">CapCut</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🎬</div>
+        <h3>Short-Form Video Production</h3>
+        <p>Reels, TikToks, and YouTube Shorts—edited, captioned, and optimized for each platform to drive organic reach.</p>
+        <div class="service-tools">
+          <span class="tool-chip">CapCut</span>
+          <span class="tool-chip">Filmora</span>
+          <span class="tool-chip">Canva</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🎨</div>
+        <h3>Brand Design</h3>
+        <p>Cohesive brand identity design including logos, color palettes, and print-ready assets optimized for web and cross-channel use.</p>
+        <div class="service-tools">
+          <span class="tool-chip">Canva</span>
+          <span class="tool-chip">Photoshop</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Case Studies & Projects</h2>
+      <p>Real problems. Real solutions. Real results.</p>
+    </div>
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="automation">Automation</button>
+      <button class="filter-btn" data-filter="web">Web Design</button>
+      <button class="filter-btn" data-filter="social">Social Media</button>
+      <button class="filter-btn" data-filter="brand">Branding</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="project-card" data-tags="automation" onclick="openModal('crm')">
+        <div class="project-thumb project-thumb-crm">⚙️</div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Automation · CRM</span></div>
+          <h3>Lead Nurturing Automation — Inner Eye Life Coaching</h3>
+          <p>Built a fully automated Keap + Zapier pipeline that reduced manual follow-up by over 60% and standardized lead response across the funnel.</p>
+          <span class="project-link">View Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="web" onclick="openModal('wp')">
+        <div class="project-thumb project-thumb-wp">🌐</div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Web · LMS</span></div>
+          <h3>WordPress Course Portal — SpiritedGrowth</h3>
+          <p>Designed and launched a LearnDash + Memberium course portal ready for enrollment within two weeks, shortening the expected launch timeline significantly.</p>
+          <span class="project-link">View Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="social" onclick="openModal('social')">
+        <div class="project-thumb project-thumb-social">📱</div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Social Media</span></div>
+          <h3>Social Media Management — Credit Card Brand</h3>
+          <p>Managed moderation, scheduling, and reporting for a financial services brand, maintaining brand safety and reducing manual posting time by 40%.</p>
+          <span class="project-link">View Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="automation" onclick="openModal('sched')">
+        <div class="project-thumb project-thumb-sched">📅</div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Automation · Scheduling</span></div>
+          <h3>Executive Calendar Optimization — Outsourced Doers</h3>
+          <p>Centralized scheduling using Acuity and Google Calendar, eliminating double-bookings and freeing hours of leadership time each week.</p>
+          <span class="project-link">View Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="brand" onclick="openModal('brand')">
+        <div class="project-thumb project-thumb-brand">🎨</div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Branding · Design</span></div>
+          <h3>Brand Identity — Love Yoga</h3>
+          <p>Created a full brand identity system including logo, color palette, and scalable vector assets for a wellness brand's web and print presence.</p>
+          <span class="project-link">View Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="social" onclick="openModal('vid')">
+        <div class="project-thumb project-thumb-vid">🎬</div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Video · Social</span></div>
+          <h3>Short-Form Video Production — Coaching Clients</h3>
+          <p>Produced and edited Reels and TikToks for coaching clients, increasing content volume by 3× while maintaining on-brand aesthetics.</p>
+          <span class="project-link">View Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modalContent">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<hr class="rule" />
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">Kind Words</p>
+      <h2>What Clients Say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-quote">"</div>
+        <p>Adrian completely transformed how we manage our leads. The Keap automation he built runs our entire follow-up process—we haven't missed a single lead since.</p>
+        <div class="testi-author">
+          <strong>Client, Inner Eye Life Coaching</strong>
+          <span>Life Coaching Platform</span>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-quote">"</div>
+        <p>Our course portal went live in record time. Adrian handled everything from WordPress setup to hosting configuration, and the experience for our students has been flawless.</p>
+        <div class="testi-author">
+          <strong>Client, SpiritedGrowth</strong>
+          <span>Online Education</span>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-quote">"</div>
+        <p>The brand identity Adrian created for Love Yoga felt instantly right. Clean, professional, and scalable—exactly what we needed for both digital and print.</p>
+        <div class="testi-author">
+          <strong>Client, Love Yoga</strong>
+          <span>Wellness Brand</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p class="eyebrow">Get in Touch</p>
+        <h2>Let's Work Together</h2>
+        <p class="section-header" style="margin-bottom:2rem;">Ready to automate your workflow, launch your site, or grow your social presence? Let's talk.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <span>+63 908 986 7190</span>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <span>uradrianwillis@gmail.com</span>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <span>Toril, Davao City, Philippines</span>
+        </div>
+        <div class="social-links">
+          <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://upwork.com" class="social-link" target="_blank" rel="noopener" aria-label="Upwork">U</a>
+          <a href="mailto:uradrianwillis@gmail.com" class="social-link" aria-label="Email">@</a>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label>I'm interested in...</label>
+            <select>
+              <option>CRM Automation</option>
+              <option>WordPress Development</option>
+              <option>Social Media Management</option>
+              <option>Short-Form Video</option>
+              <option>Brand Design</option>
+              <option>Calendar & Scheduling</option>
+              <option>General Virtual Assistance</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell me a bit about your project or role..."></textarea>
+          </div>
+          <button type="submit" class="btn-send">Send Message →</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="check">✅</div>
+          <h3>Message sent!</h3>
+          <p>Thanks for reaching out. I'll get back to you within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Adrian Willis Sasuman · Davao City, Philippines · <a href="mailto:uradrianwillis@gmail.com">uradrianwillis@gmail.com</a></p>
+</footer>
+
+<script>
+// ── NAV ──
+const navbar = document.getElementById('navbar');
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// ── REVEAL ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── FILTER ──
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      const tags = card.dataset.tags || '';
+      card.dataset.hide = (filter !== 'all' && !tags.includes(filter)) ? 'true' : 'false';
+    });
+  });
+});
+
+// ── CASE STUDY DATA ──
+const caseStudies = {
+  crm: {
+    eyebrow: 'CRM Automation · Keap · Zapier',
+    title: 'Lead Nurturing Automation',
+    client: 'Inner Eye Life Coaching',
+    summary: 'Automated lead workflows that reduced manual follow-up by 60%+ and standardized client communication across the entire sales funnel.',
+    role: 'CRM Automation Expert', tools: 'Keap, Zapier, Mailchimp', duration: '3 months',
+    problem: 'The client was manually following up with every new lead via email—a time-consuming process prone to delays and inconsistency, resulting in lost prospects and missed revenue.',
+    process: [
+      { step: '1', title: 'Audit', desc: 'Mapped the existing manual workflow and identified 8 repetitive touchpoints suitable for automation.' },
+      { step: '2', title: 'Design', desc: 'Designed a Keap automation sequence covering welcome emails, nurture campaigns, and follow-up triggers.' },
+      { step: '3', title: 'Build', desc: 'Connected Keap to Zapier integrations with the booking tool and calendar, ensuring real-time data sync.' },
+      { step: '4', title: 'Test & Launch', desc: 'Ran QA on 15+ test leads and went live, with dashboards configured for ongoing performance tracking.' },
+    ],
+    outcomes: [
+      { label: 'Manual follow-up reduced', value: 60, display: '60%' },
+      { label: 'Lead response time improved', value: 85, display: '85%' },
+      { label: 'Data entry errors eliminated', value: 95, display: '95%' },
+    ]
+  },
+  wp: {
+    eyebrow: 'Web Design · LMS · WordPress',
+    title: 'WordPress Course Portal',
+    client: 'SpiritedGrowth',
+    summary: 'A full LearnDash + Memberium course portal designed, configured, and launched in under two weeks—ready for immediate enrollment.',
+    role: 'Web Designer & VA', tools: 'WordPress, LearnDash, Memberium, Bluehost', duration: '2 weeks',
+    problem: 'The client had a completed course curriculum but no platform to deliver it. They needed a professional, secure membership site configured for both free and paid tiers—fast.',
+    process: [
+      { step: '1', title: 'Discovery', desc: 'Gathered course content, desired membership tiers, branding assets, and payment gateway details.' },
+      { step: '2', title: 'Hosting Setup', desc: 'Configured Bluehost environment, installed WordPress, and applied security hardening.' },
+      { step: '3', title: 'Build', desc: 'Built out LearnDash course structure and configured Memberium membership levels and access rules.' },
+      { step: '4', title: 'Launch', desc: 'Tested enrollment flow end-to-end, provided training documentation, and handed off to client.' },
+    ],
+    outcomes: [
+      { label: 'Launch timeline (vs. estimate)', value: 70, display: '2 wks' },
+      { label: 'Enrollment-ready on day 1', value: 100, display: '100%' },
+      { label: 'Client onboarding satisfaction', value: 95, display: '5★' },
+    ]
+  },
+  social: {
+    eyebrow: 'Social Media · Content · Moderation',
+    title: 'Social Media Management',
+    client: 'Credit Card Company (Part-time)',
+    summary: 'End-to-end social media management for a financial brand—covering moderation, scheduling, and performance reporting.',
+    role: 'Social Media Manager', tools: 'Canva, Buffer, Meta Business Suite', duration: '4 months',
+    problem: 'The brand had an active audience but no consistent moderation or content scheduling process. Harmful comments were going unaddressed and posting was ad-hoc, hurting engagement and brand trust.',
+    process: [
+      { step: '1', title: 'Audit', desc: 'Reviewed existing channels, identified moderation gaps, and documented brand voice guidelines.' },
+      { step: '2', title: 'Strategy', desc: 'Built a 30-day content calendar aligned with campaigns and product promotions.' },
+      { step: '3', title: 'Execution', desc: 'Scheduled posts, monitored comments daily, escalated sensitive issues to leadership, and created visual assets in Canva.' },
+      { step: '4', title: 'Reporting', desc: 'Delivered weekly performance summaries covering reach, engagement, and moderation activity.' },
+    ],
+    outcomes: [
+      { label: 'Manual posting time reduced', value: 40, display: '40%' },
+      { label: 'Harmful content removal rate', value: 98, display: '98%' },
+      { label: 'Engagement consistency', value: 75, display: '↑75%' },
+    ]
+  },
+  sched: {
+    eyebrow: 'Automation · Scheduling · Operations',
+    title: 'Executive Calendar Optimization',
+    client: 'Outsourced Doers',
+    summary: 'Centralized scheduling across Acuity Scheduling and Google Calendar, eliminating double-bookings and reclaiming leadership time.',
+    role: 'Virtual Assistant', tools: 'Acuity Scheduling, Google Calendar, Zapier', duration: 'Ongoing',
+    problem: 'Multiple executives were managing their own calendars independently, leading to double-bookings, missed meetings, and fragmented scheduling across time zones.',
+    process: [
+      { step: '1', title: 'Audit', desc: 'Documented current booking flows, meeting types, and timezone conflicts across 3 executives.' },
+      { step: '2', title: 'Centralize', desc: 'Set up Acuity Scheduling with custom meeting types, availability rules, and buffer times.' },
+      { step: '3', title: 'Integrate', desc: 'Synced Acuity with Google Calendar via Zapier for real-time updates and conflict detection.' },
+      { step: '4', title: 'Maintain', desc: 'Managed ongoing calendar as needed, handling rescheduling, reminders, and priority escalations.' },
+    ],
+    outcomes: [
+      { label: 'Double-bookings eliminated', value: 100, display: '0' },
+      { label: 'Scheduling time saved/week', value: 80, display: '~5hrs' },
+      { label: 'Executive satisfaction', value: 95, display: '95%' },
+    ]
+  },
+  brand: {
+    eyebrow: 'Brand Design · Visual Identity',
+    title: 'Brand Identity — Love Yoga',
+    client: 'Love Yoga',
+    summary: 'A cohesive brand identity system—logo, palette, and scalable assets—for a wellness brand expanding its web and print presence.',
+    role: 'Graphic Designer & Technical Support', tools: 'Canva, Photoshop', duration: '6 weeks',
+    problem: "Love Yoga had been operating with inconsistent visual branding across platforms. Their existing materials didn't reflect the calm, premium feel they wanted to project to new clients.",
+    process: [
+      { step: '1', title: 'Discovery', desc: 'Conducted a brand workshop session to define values, target audience, and visual direction.' },
+      { step: '2', title: 'Concept', desc: 'Presented 3 logo directions with supporting color palettes and typography pairings.' },
+      { step: '3', title: 'Refine', desc: 'Iterated on the chosen direction with client feedback across 2 rounds of revisions.' },
+      { step: '4', title: 'Deliver', desc: 'Packaged final assets in web (PNG/SVG) and print (PDF) formats with brand usage guidelines.' },
+    ],
+    outcomes: [
+      { label: 'Brand consistency across channels', value: 100, display: '100%' },
+      { label: 'Asset delivery formats', value: 6, display: '6 fmts' },
+      { label: 'Rounds to approval', value: 30, display: '2 revs' },
+    ]
+  },
+  vid: {
+    eyebrow: 'Video Production · Social Media',
+    title: 'Short-Form Video Production',
+    client: 'Coaching Clients',
+    summary: 'Produced and edited Reels and TikToks for coaching clients, tripling content output while preserving on-brand quality.',
+    role: 'Video Editor & Content Producer', tools: 'CapCut, Filmora, Canva', duration: 'Ongoing',
+    problem: 'Coaches wanted to grow on Instagram and TikTok but lacked the time or skills to produce consistent short-form video. Content was irregular and off-brand.',
+    process: [
+      { step: '1', title: 'Strategy', desc: 'Defined content pillars, video formats, and a weekly production schedule for each client.' },
+      { step: '2', title: 'Production', desc: 'Received raw footage from clients; edited using CapCut/Filmora with captions, transitions, and music.' },
+      { step: '3', title: 'Brand QA', desc: 'Applied brand fonts, colors, and intro/outro templates to ensure visual consistency.' },
+      { step: '4', title: 'Publish', desc: 'Scheduled and published across platforms with optimized captions and hashtag sets.' },
+    ],
+    outcomes: [
+      { label: 'Content volume increase', value: 66, display: '3×' },
+      { label: 'Turnaround time (per video)', value: 70, display: '<24h' },
+      { label: 'On-brand approval rate', value: 95, display: '95%' },
+    ]
+  },
+};
+
+function openModal(key) {
+  const d = caseStudies[key];
+  if (!d) return;
+  const outcomes = d.outcomes.map(o => `
+    <div class="outcome-item">
+      <span class="outcome-label">${o.label}</span>
+      <div class="outcome-bar-wrap"><div class="outcome-bar" style="width:${o.value}%"></div></div>
+      <span class="outcome-num">${o.display}</span>
+    </div>
+  `).join('');
+  const steps = d.process.map(s => `
+    <div class="timeline-step">
+      <div class="timeline-dot">${s.step}</div>
+      <div class="timeline-content">
+        <strong>${s.title}</strong>
+        <p>${s.desc}</p>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('modalBody').innerHTML = `
+    <p class="eyebrow">${d.eyebrow}</p>
+    <h2>${d.title}</h2>
+    <p class="modal-summary">Client: <strong>${d.client}</strong> — ${d.summary}</p>
+    <div class="modal-meta">
+      <div class="meta-item"><strong>Role</strong><span>${d.role}</span></div>
+      <div class="meta-item"><strong>Tools</strong><span>${d.tools}</span></div>
+      <div class="meta-item"><strong>Duration</strong><span>${d.duration}</span></div>
+    </div>
+    <div class="modal-section">
+      <h4>The Problem</h4>
+      <p>${d.problem}</p>
+    </div>
+    <div class="modal-section">
+      <h4>Process & Approach</h4>
+      <div class="process-timeline">${steps}</div>
+    </div>
+    <div class="modal-section">
+      <h4>Key Outcomes</h4>
+      <div class="outcome-row">${outcomes}</div>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── CONTACT FORM ──
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+
+// ── RESUME ──
+function downloadResume(e) {
+  e.preventDefault();
+  alert('Resume download would be linked here. Replace with your actual PDF URL.');
+}
+</script>
+</body>
+</html>
