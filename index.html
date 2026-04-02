@@ -666,7 +666,7 @@ footer a { color:#ff6b1a; text-decoration:none; }
 <div class="lb-overlay" id="lbOverlay" onclick="closeLightboxOutside(event)">
   <div class="lb-inner">
     <button class="lb-close" onclick="closeLightbox()">✕</button>
-    <img id="lbImg" src="" alt="" />
+    <img id="lbImg" src="Course.png" alt="Project 1" />
     <p class="lb-caption" id="lbCaption"></p>
   </div>
 </div>
@@ -856,26 +856,6 @@ function downloadResume(e) {
 }
 
 // ══ CAROUSEL ══
-const galleryData = [
-  { src: "Course.png", alt: "Project photo 1" },
-  { src: "Modules.png", alt: "Project photo 2" },
-  { src: "Lesson.png", alt: "Project photo 3" }
-];
-
-galleryData.forEach(item => {
-  const slide = document.createElement("div");
-  slide.classList.add("slide");
-
-  const img = document.createElement("img");
-  img.src = item.src;
-  img.alt = item.alt;
-
-  slide.appendChild(img);
-  galleryContainer.appendChild(slide);
-});
-
-
-  
 (function(){
   const track=document.getElementById('carouselTrack');
   const outer=document.getElementById('carouselOuter');
