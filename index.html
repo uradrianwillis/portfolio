@@ -856,6 +856,26 @@ function downloadResume(e) {
 }
 
 // ══ CAROUSEL ══
+const galleryData = [
+  { src: "Course.png", alt: "Project photo 1" },
+  { src: "Modules.png", alt: "Project photo 2" },
+  { src: "Lesson.png", alt: "Project photo 3" }
+];
+
+galleryData.forEach(item => {
+  const slide = document.createElement("div");
+  slide.classList.add("slide");
+
+  const img = document.createElement("img");
+  img.src = item.src;
+  img.alt = item.alt;
+
+  slide.appendChild(img);
+  galleryContainer.appendChild(slide);
+});
+
+
+  
 (function(){
   const track=document.getElementById('carouselTrack');
   const outer=document.getElementById('carouselOuter');
