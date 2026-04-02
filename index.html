@@ -221,7 +221,7 @@ nav.scrolled { background: var(--bg); border-bottom-color: var(--border-2); box-
   position:relative; overflow:hidden; margin-bottom:1.2rem;
 }
 .about-photo-placeholder::before {
-  content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-55%);
+  content:'AW'; position:absolute; top:50%; left:50%; transform:translate(-50%,-55%);
   font-family:'Inter',sans-serif; font-size:7rem; font-weight:800;
   color:rgba(255,107,26,.1); letter-spacing:-.06em;
 }
@@ -339,10 +339,6 @@ nav.scrolled { background: var(--bg); border-bottom-color: var(--border-2); box-
 .add-slide:hover { border-color:var(--orange); color:var(--orange); background:var(--orange-tint); }
 .add-slide .add-icon { font-size:2rem; }
 .add-slide span { font-size:.76rem; font-weight:500; text-align:center; line-height:1.45; }
-
-  
-galleryData[0].src = "Course.png";
-
 
 /* ═══ PROJECTS ═══ */
 #projects { background:var(--bg); }
@@ -572,11 +568,8 @@ footer a { color:#ff6b1a; text-decoration:none; }
   <div class="container">
     <div class="about-grid">
       <div class="about-photo-wrap reveal">
-        <div class="about-photo-placeholder" style="padding:0; overflow:hidden;">
-          <img src="AdrianProfile.png" alt="Adrian Willis Sasuman"
-            style="width:100%; height:100%; object-fit:fill; border-radius:6px;" />
-            <span class="available-badge" style="position:absolute; bottom:1.5rem; left:1.5rem;">
-          <span class="dot"></span> Available for work </span>
+        <div class="about-photo-placeholder">
+          <span class="available-badge"><span class="dot"></span> Available for work</span>
         </div>
         <div class="certs">
           <p class="certs-title">Education & Certifications</p>
@@ -643,30 +636,26 @@ footer a { color:#ff6b1a; text-decoration:none; }
       <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous">&#8592;</button>
       <div class="carousel-track-outer" id="carouselOuter">
         <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide"><div class="carousel-img-wrap"><img src="Course.png" alt="Course Portal" loading="lazy" />
-            <button class="slide-zoom-btn" onclick="openLightbox(0)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">Inner Eye Life Coaching Course Portal</span><h4>Keap Lead Nurture Pipeline</h4><p>Full automation sequence for Inner Eye Life Coaching — welcome series, follow-ups, and tagging logic.</p></div></div>
-          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">🌐<span>Add Screenshot</span></div>
-            <button class="slide-zoom-btn" onclick="openLightbox(1)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">WordPress · LMS</span><h4>SpiritedGrowth Course Portal</h4><p>LearnDash + Memberium site launched in under two weeks, ready for live enrollment.</p></div></div>
-          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">📱<span>Add Screenshot</span></div>
-            <button class="slide-zoom-btn" onclick="openLightbox(2)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">Social Media</span><h4>Content Calendar & Scheduling</h4><p>30-day content plan for a financial brand's Instagram and Facebook channels.</p></div></div>
-          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">🎨<span>Add Screenshot</span></div>
-            <button class="slide-zoom-btn" onclick="openLightbox(3)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">Branding</span><h4>Love Yoga Brand Identity</h4><p>Logo, palette, and typography system delivered in 6 export formats for web and print.</p></div></div>
-          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">🎬<span>Add Screenshot</span></div>
-            <button class="slide-zoom-btn" onclick="openLightbox(4)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">Video Production</span><h4>Coaching Reels & TikToks</h4><p>Short-form videos with captions, transitions, and on-brand overlays via CapCut and Filmora.</p></div></div>
-          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">📅<span>Add Screenshot</span></div>
-            <button class="slide-zoom-btn" onclick="openLightbox(5)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">Scheduling</span><h4>Executive Calendar System</h4><p>Acuity + Google Calendar with Zapier sync — zero double-bookings across three executive calendars.</p></div></div>
+          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">⚙️<span>Add Screenshot</span></div><!-- <img src="gallery/project-1.jpg" alt="" loading="lazy" /> --><button class="slide-zoom-btn" onclick="openLightbox(0)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">CRM Automation</span><h4>Keap Lead Nurture Pipeline</h4><p>Full automation sequence for Inner Eye Life Coaching — welcome series, follow-ups, and tagging logic.</p></div></div>
+          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">🌐<span>Add Screenshot</span></div><!-- <img src="gallery/project-2.jpg" alt="" loading="lazy" /> --><button class="slide-zoom-btn" onclick="openLightbox(1)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">WordPress · LMS</span><h4>SpiritedGrowth Course Portal</h4><p>LearnDash + Memberium site launched in under two weeks, ready for live enrollment.</p></div></div>
+          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">📱<span>Add Screenshot</span></div><!-- <img src="gallery/project-3.jpg" alt="" loading="lazy" /> --><button class="slide-zoom-btn" onclick="openLightbox(2)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">Social Media</span><h4>Content Calendar & Scheduling</h4><p>30-day content plan for a financial brand's Instagram and Facebook channels.</p></div></div>
+          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">🎨<span>Add Screenshot</span></div><!-- <img src="gallery/project-4.jpg" alt="" loading="lazy" /> --><button class="slide-zoom-btn" onclick="openLightbox(3)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">Branding</span><h4>Love Yoga Brand Identity</h4><p>Logo, palette, and typography system delivered in 6 export formats for web and print.</p></div></div>
+          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">🎬<span>Add Screenshot</span></div><!-- <img src="gallery/project-5.jpg" alt="" loading="lazy" /> --><button class="slide-zoom-btn" onclick="openLightbox(4)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">Video Production</span><h4>Coaching Reels & TikToks</h4><p>Short-form videos with captions, transitions, and on-brand overlays via CapCut and Filmora.</p></div></div>
+          <div class="carousel-slide"><div class="carousel-img-wrap"><div class="carousel-placeholder">📅<span>Add Screenshot</span></div><!-- <img src="gallery/project-6.jpg" alt="" loading="lazy" /> --><button class="slide-zoom-btn" onclick="openLightbox(5)" aria-label="Zoom">⤢</button></div><div class="carousel-caption"><span class="slide-tag">Scheduling</span><h4>Executive Calendar System</h4><p>Acuity + Google Calendar with Zapier sync — zero double-bookings across three executive calendars.</p></div></div>
+          <div class="add-slide" onclick="alert('To add a photo:\n1. Copy any slide block.\n2. Remove the placeholder div.\n3. Uncomment the img tag and set the src.\n4. Update galleryData[n].src in the script.')"><div class="add-icon">＋</div><span>Add more<br/>project photos</span></div>
+        </div>
       </div>
       <button class="carousel-btn next" id="carouselNext" aria-label="Next">&#8594;</button>
     </div>
+    <div class="carousel-dots" id="carouselDots"></div>
   </div>
 </section>
-
 
 <!-- LIGHTBOX -->
 <div class="lb-overlay" id="lbOverlay" onclick="closeLightboxOutside(event)">
   <div class="lb-inner">
     <button class="lb-close" onclick="closeLightbox()">✕</button>
-    <img id="lbImg" src="Course.png" alt="Project 1" />
+    <img id="lbImg" src="" alt="" />
     <p class="lb-caption" id="lbCaption"></p>
   </div>
 </div>
@@ -697,7 +686,6 @@ footer a { color:#ff6b1a; text-decoration:none; }
       <div class="project-card" data-tags="social" onclick="openModal('vid')"><div class="project-thumb project-thumb-vid">🎬</div><div class="project-body"><div class="project-tags"><span class="project-tag">Video · Social</span></div><h3>Short-Form Video Production — Coaching Clients</h3><p>Produced Reels and TikToks that tripled content volume while maintaining on-brand aesthetics.</p><span class="project-link">View Case Study <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div></div>
     </div>
   </div>
-</div>
 </section>
 
 <!-- CASE STUDY MODAL -->
@@ -853,7 +841,7 @@ function handleSubmit(e) {
 // ══ RESUME ══
 function downloadResume(e) {
   e.preventDefault();
-  const a=document.createElement('a'); a.href='Adrian_CV.pdf'; a.download='Adrian_Willis_Sasuman_CV.pdf'; a.click();
+  const a=document.createElement('a'); a.href='Adrian_Willis_Sasuman_CV.pdf'; a.download='Adrian_Willis_Sasuman_CV.pdf'; a.click();
 }
 
 // ══ CAROUSEL ══
@@ -900,9 +888,7 @@ function downloadResume(e) {
 
 // ══ LIGHTBOX ══
 const GD=[
-  {src:'Course.png',caption:'Course Portal — Inner Eye Life Coaching'},
-  {src:'Modules.png',caption:'Course Portal — Inner Eye Life Coaching'},
-  {src:'Lesson.png',caption:'Course Portal — Inner Eye Life Coaching'},
+  {src:'',caption:'Keap Lead Nurture Pipeline — Inner Eye Life Coaching'},
   {src:'',caption:'SpiritedGrowth Course Portal — LearnDash + Memberium'},
   {src:'',caption:'Content Calendar & Scheduling — Financial Brand'},
   {src:'',caption:'Love Yoga Brand Identity — Logo & Color System'},
